@@ -34,6 +34,7 @@ src -> diretório com a estrutura do projeto
 - Logar restaurante
 - Atualizar informações do restaurante
 - Excluir conta do restaurante
+- Recuperar informações do restaurante por ID
 - Cadastrar novo item no menu do restaurante
 - Ver todos os itens do menu do restaurante
 - Atualizar itens do menu do restaurante
