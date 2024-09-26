@@ -37,8 +37,117 @@ src -> diretório com a estrutura do projeto
 - Recuperar informações do restaurante por ID
 - Cadastrar novo item no menu do restaurante
 - Ver todos os itens do menu do restaurante
-- Atualizar itens do menu do restaurante
-- Excluir itens do menu do restaurante 
+- Atualizar itenm do menu do restaurante
+- Excluir itenm do menu do restaurante 
+
+## Rotas 🛣️
+- Cadastrar restaurante
+    ```
+    http://localhost:3000/restaurant/register
+    ```
+    * Colocar no body da requisição as seguintes informações para criar um novo restaurante:
+    ```
+    {
+        "name": "",
+        "password": "",
+        "passwordConfirmation": "",
+        "phoneNumber": 00000000000 (um número deve ser passado aqui),
+        "email": ""
+    }
+    ``` 
+- Logar restaurante
+    ```
+    http://localhost:3000/restaurant/login
+    ```
+    * Colocar no body da requisição as seguintes informações para fazer login com um restaurante:
+    ```
+    {
+        "email": "",
+        "password": "",
+    }
+    ``` 
+- Atualizar informações do restaurante
+    ```
+    http://localhost:3000/restaurant
+    ```
+    * Colocar no body da requisição os campos do restaurante que devem ser alterados (a senha não pode ser passada). Ex:
+    ```
+    {
+        "email": "",
+    }
+    ```
+    * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
+- Excluir conta do restaurante
+    ```
+    http://localhost:3000/restaurant/
+    ```
+   * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
+- Recuperar informações do restaurante por ID
+    ```
+    http://localhost:3000/restaurant
+    ```
+    * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
+- Cadastrar novo item no menu do restaurante
+    ```
+    http://localhost:3000/restaurant/create-new-menu-item
+    ```
+    * Colocar no body da requisição as seguintes informações para a criação de um novo item no menu do restaurante:
+    ```
+    {
+        "name": "",
+        "image": "",
+        "description": "",
+        "price": (um número deve ser passado aqui)
+    }
+    ```
+    * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
+- Ver todos os itens do menu do restaurante
+    ```
+    http://localhost:3000/restaurant/menu
+    ```
+    * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
+- Atualizar item do menu do restaurante
+    ```
+    http://localhost:3000/restaurant/update/:id
+    ```
+    * Colocar ID do item do menu a ser alterado como parâmetro na URL da requisição
+    * Colocar no body as informações sobre o item do menu que foram alteradas e, as que não foram, devem ser colocadas as informações concedidas.
+    ```
+    {
+        "name": "",
+        "image": "",
+        "description": "",
+        "price": (um número deve ser passado aqui)
+    }
+    ```
+    * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
+- Excluir itenm do menu do restaurante 
+    ```
+    http://localhost:3000/restaurant/delete/:id
+    ```
+    * Colocar ID do item do menu a ser excluido como parâmetro na URL da requisição
+    * Colocar no header da requisição o token de autorização:
+    ```
+    "Authorization": "seu-token-de-acesso"
+    ```
 
 ## Use o projeto localmente 🏃‍♀️
 1. Clone o repositório do projeto:
