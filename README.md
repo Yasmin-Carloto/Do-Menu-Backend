@@ -38,7 +38,7 @@ src -> diretório com a estrutura do projeto
 - Cadastrar novo item no menu do restaurante
 - Ver todos os itens do menu do restaurante
 - Atualizar itenm do menu do restaurante
-- Excluir itenm do menu do restaurante 
+- Excluir item do menu do restaurante 
 
 ## Rotas 🛣️
 - Cadastrar restaurante
